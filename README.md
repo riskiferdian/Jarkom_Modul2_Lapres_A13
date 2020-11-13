@@ -8,50 +8,100 @@ Kalian diminta untuk membuat sebuah website utama dengan
 
 Topologi
 
+konfigurasi zone "semerua13.pw" 
+
 ![gambar](/images/2.png)
 
+tambahkan semerua13.pw tipenya NS dan Petakan IP probolinggo
+
 ![gambar](/images/3.png)
+
+testing
 
 ![gambar](/images/4.png)
 
 (2) alias http://www.semeruyyy.pw, dan 
 
+alias , www CNAME 
+
 ![gambar](/images/5.png)
+
+testing
 
 ![gambar](/images/6.png)
 
 (3) subdomain http://penanjakan.semeruyyy.pw yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO serta dibuatkan 
 
+nano /etc/bind/jarkom/semerua13.pw
+tambah konfigurasi penanjakan
+
 ![gambar](/images/7.png)
+
+testing
 
 ![gambar](/images/8.png)
 
 (4) reverse domain untuk domain utama. Untuk mengantisipasi server dicuri/rusak, Bibah minta dibuatkan
 
+tambah konfigurasi zone "71.151.10.in-addr.arpa" 
+
 ![gambar](/images/9.png)
 
+tambahkan byte ke 4 IP probolinggo
+
 ![gambar](/images/10.png)
+
+testing
 
 ![gambar](/images/11.png)
 
 (5) DNS Server Slave pada MOJOKERTO agar Bibah tidak terganggu menikmati keindahan Semeru pada Website. Selain website utama Bibah juga meminta dibuatkan 
 
+also-notify (masukan IP Mojokerto)
+
 ![gambar](/images/12.png)
 
+type slave (IP malang)
+
 ![gambar](/images/13.png)
+
+testing
 
 ![gambar](/images/14.png)
 
 (6) subdomain dengan alamat 
 http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO. Bibah juga ingin memberi petunjuk mendaki gunung semeru kepada anggota komunitas sehingga dia meminta dibuatkan 
 
+edit konfigurasi server malang
+konfigurasi ns1
+
+![gambar](/images/48.png)
+
+allow transfer
+
+![gambar](/images/49.png)
+
+edit konfirguasi server mojokerto
+
+konfigurasi gunung.semerua13.pw
+
+![gambar](/images/50.png)
+
+buat direktori delegasi dan atur konfigurasi seperti dibawah
+
 ![gambar](/images/15.png)
+
+testing
 
 ![gambar](/images/16.png)
 
 (7) subdomain dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server PROBOLINGGO. Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur web server. 
 
+edit konfigurasi spt soal 6
+
 ![gambar](/images/17.png)
+
+testing
 
 ![gambar](/images/18.png)
 
